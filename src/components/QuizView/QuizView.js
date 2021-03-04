@@ -28,7 +28,23 @@ const questions = [
   },
 ];
 
+const quiz = {
+  questions: questions.map(
+    ({
+      category,
+      questionText,
+      answersJSON: { correctAnswer, incorrectAnswers },
+    }) => ({
+      category,
+      questionText,
+      answers: shuffle([correctAnswer, ...incorrectAnswers]),
+    })
+  ),
+};
+
 function QuizView() {
+  const { questions } = quiz;
+
   const [question, setQuestion] = useState(questions[0]);
 
   const onClickNext = () => {
@@ -51,13 +67,6 @@ function QuizView() {
     }
   };
 
-  const answersList = shuffle([
-    ...question.answersJSON.incorrectAnswers,
-    question.answersJSON.correctAnswer,
-  ]);
-
-  console.log(answersList);
-
   return (
     <Container maxWidth="md">
       <QuizHeader
@@ -66,7 +75,7 @@ function QuizView() {
         totalQuestions={questions.length}
       />
       <QuizCard question={question.questionText} />
-      <QuizAnswers answers={answersList} />
+      <QuizAnswers answers={question.answers} />
       <QuizNav onClickNext={onClickNext} onClickPrevious={onClickPrevious} />
     </Container>
   );
