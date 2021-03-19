@@ -5,7 +5,6 @@ import { AmplifyAuthenticator, AmplifySignUp } from "@aws-amplify/ui-react";
 import { Auth, Hub } from "aws-amplify";
 
 import NewQuestion from "./components/NewQuestion/NewQuestion";
-import QuizView from "./components/QuizView/QuizView";
 import SideBar from "./components/SideBar/SideBar";
 import { theme } from "./theme";
 import { AuthConfig } from "./authentication/config";
@@ -41,7 +40,7 @@ function App() {
               <NewQuestion />
             </Route>
             <Route path="/quiz">
-              <QuizView />
+              <></>
             </Route>
             <Route path="/">
               <NewQuestion />

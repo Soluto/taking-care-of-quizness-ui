@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button, TextField, makeStyles, Divider } from "@material-ui/core";
-import { Auth } from "aws-amplify";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -41,35 +40,19 @@ function NewQuestionForm() {
 
   const submitQuestion = async (event) => {
     event.preventDefault();
-    const accessToken = (await Auth.currentSession())
-      .getIdToken()
-      .getJwtToken();
-    console.log((await Auth.currentSession()).getIdToken().getJwtToken());
-    try {
-      await fetch(process.env.REACT_APP_API_URL, {
-        method: "POST",
-        headers: {
-          "x-api-key": process.env.REACT_APP_API_KEY,
-          Authorization: accessToken,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          category: category,
-          questionText: question,
-          answers: {
-            correctAnswer: correctAnswer,
-            incorrectAnswers: [
-              incorrectAnswer1,
-              incorrectAnswer2,
-              incorrectAnswer3,
-            ],
-          },
-        }),
-      });
-      setDefaultState();
-    } catch (err) {
-      console.log(err);
-    }
+    console.log({
+      category: category,
+      questionText: question,
+      answers: {
+        correctAnswer: correctAnswer,
+        incorrectAnswers: [
+          incorrectAnswer1,
+          incorrectAnswer2,
+          incorrectAnswer3,
+        ],
+      },
+    });
+    setDefaultState();
   };
 
   return (
