@@ -4,12 +4,16 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AmplifyAuthenticator, AmplifySignUp } from "@aws-amplify/ui-react";
 import { Auth, Hub } from "aws-amplify";
 
-import NewQuestion from "./components/NewQuestion/NewQuestion";
 import SideBar from "./components/SideBar/SideBar";
 import { theme } from "./theme";
 import { AuthConfig } from "./authentication/config";
 
 Auth.configure(AuthConfig);
+
+const newQuestionPlaceholder = {
+  display: "flex",
+  justifyContent: "center",
+};
 
 function App() {
   const [user, updateUser] = useState(null);
@@ -37,13 +41,17 @@ function App() {
           <SideBar />
           <Switch>
             <Route path="/new">
-              <NewQuestion />
+              <div style={newQuestionPlaceholder}>
+                <p>new question form goes here</p>
+              </div>
             </Route>
             <Route path="/quiz">
               <></>
             </Route>
             <Route path="/">
-              <NewQuestion />
+              <div style={newQuestionPlaceholder}>
+                <p>new question form goes here</p>
+              </div>
             </Route>
           </Switch>
         </Router>
