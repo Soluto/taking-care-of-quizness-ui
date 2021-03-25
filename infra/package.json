@@ -4,8 +4,9 @@
   "description": "Infrastructure to host the taking-care-of-quizness-ui website",
   "license": "MIT",
   "scripts": {
-    "deploy": "cdk deploy",
+    "deploy": "cdk deploy --require-approval never",
     "synth": "cdk synth",
+    "destroy": "cdk destroy",
     "test": "jest"
   },
   "dependencies": {
