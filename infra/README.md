@@ -36,8 +36,11 @@ In order to handle continuous deployments via [Github Actions](https://github.co
     },
     {
       "Effect": "Allow",
-      "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
-      "Resource": "arn:aws:s3:::cdktoolkit-stagingbucket-<staging-bucket-id>"
+      "Action": ["s3:ListBucket", "s3:GetBucketLocation", "s3:PutObject"],
+      "Resource": [
+        "arn:aws:s3:::cdktoolkit-stagingbucket-<staging-bucket-id>",
+        "arn:aws:s3:::cdktoolkit-stagingbucket-<staging-bucket-id>/*"
+      ]
     },
     {
       "Effect": "Allow",
