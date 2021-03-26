@@ -19,6 +19,7 @@ jobs:
           key: ${{ runner.os }}-cache-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-cache-
+            ${{ runner.os }}-
       - run: npm ci
       - run: npm --prefix infra ci
       - name: Configure AWS credentials
