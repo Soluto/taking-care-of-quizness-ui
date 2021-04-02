@@ -49,7 +49,6 @@ class StaticWebsite extends cdk.Stack {
     );
 
     const bucket = new s3.Bucket(this, "S3Bucket", {
-      bucketName: id,
       publicReadAccess: false,
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.DESTROY,

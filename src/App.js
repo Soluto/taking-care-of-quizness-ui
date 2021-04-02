@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "@material-ui/core";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AmplifyAuthenticator, AmplifySignUp } from "@aws-amplify/ui-react";
-import Amplify, { Auth, Hub } from "aws-amplify";
+import { Auth, Hub } from "aws-amplify";
 
 import NewQuestion from "./components/NewQuestion/NewQuestion";
 import QuizView from "./components/QuizView/QuizView";
@@ -10,7 +10,7 @@ import SideBar from "./components/SideBar/SideBar";
 import { theme } from "./theme";
 import { AuthConfig } from "./authentication/config";
 
-Amplify.configure(AuthConfig);
+Auth.configure(AuthConfig);
 
 function App() {
   const [user, updateUser] = useState(null);

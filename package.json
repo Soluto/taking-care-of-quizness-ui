@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "yarn build && yarn --cwd infra deploy"
+    "deploy": "npm run build && npm run --prefix infra deploy",
+    "destroy": "npm run --prefix infra destroy"
   },
   "eslintConfig": {
     "extends": [

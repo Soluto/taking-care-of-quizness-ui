@@ -33,6 +33,15 @@ function QuizAnswers({ answers, correctAnswer }) {
   const classes = useStyles();
   const [selectedAnswer, setSelectedAnswer] = useState(null);
 
+  if (!answers.includes(correctAnswer)) {
+    return (
+      <>
+        Something went wrong. There is no correct answer configured for this
+        question. 😜
+      </>
+    );
+  }
+
   return (
     <Grid container spacing={2}>
       {answers.map((answer) => (
