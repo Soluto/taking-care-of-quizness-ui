@@ -50,4 +50,4 @@ The `useEffect` hook allows us to perform side edffects in function components. 
 
 ### [function Components](https://reactjs.org/docs/components-and-props.html)
 
-Components are small, reusable pieces of a user interface. Describing our code this way can reduce duplication, and also allow us to logically separate our code in a way that matches the theoretical concepts behind our applications domain of knowledge.
+Components are small, reusable pieces of a user interface. Describing our code this way can reduce duplication, and also allow us to logically separate our code in a way that matches the theoretical concepts behind our applications domain of knowledge. Function components allow a more concise syntax that is also easier to read and understand.
