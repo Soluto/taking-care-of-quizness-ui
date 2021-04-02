@@ -24,14 +24,6 @@ const useStyles = makeStyles({
 function QuizView() {
   const classes = useStyles();
 
-  const renderLoading = () => {
-    return (
-      <Box className={classes.spinnerBox}>
-        <CircularProgress color="primary" />
-      </Box>
-    );
-  };
-
   return <></>;
 }
 
