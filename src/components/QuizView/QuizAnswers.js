@@ -31,38 +31,8 @@ const incorrectTheme = createMuiTheme({
 
 function QuizAnswers({ answers, correctAnswer }) {
   const classes = useStyles();
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-  if (!answers.includes(correctAnswer)) {
-    return (
-      <>
-        Something went wrong. There is no correct answer configured for this
-        question. 😜
-      </>
-    );
-  }
-
-  return (
-    <Grid container spacing={2}>
-      {answers.map((answer) => (
-        <Grid item xs={12} sm={6} key={answer}>
-          <ThemeProvider
-            theme={answer === correctAnswer ? correctTheme : incorrectTheme}
-          >
-            <Button
-              disableElevation
-              className={classes.answer}
-              color={answer === selectedAnswer ? "primary" : "secondary"}
-              variant={answer === selectedAnswer ? "contained" : "outlined"}
-              onClick={() => setSelectedAnswer(answer)}
-            >
-              {answer}
-            </Button>
-          </ThemeProvider>
-        </Grid>
-      ))}
-    </Grid>
-  );
+  return <></>;
 }
 
 export default QuizAnswers;

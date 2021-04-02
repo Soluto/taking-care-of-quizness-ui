@@ -22,15 +22,7 @@ const useStyles = makeStyles({
 function QuizCard({ question }) {
   const classes = useStyles();
 
-  return (
-    <Box className={classes.root}>
-      <Card className={classes.card} variant="outlined">
-        <CardContent className={classes.question}>
-          <Typography variant="h5">{question}</Typography>
-        </CardContent>
-      </Card>
-    </Box>
-  );
+  return <></>;
 }
 
 export default QuizCard;

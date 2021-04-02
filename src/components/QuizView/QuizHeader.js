@@ -16,21 +16,8 @@ const useStyles = makeStyles((theme) => ({
 
 function QuizHeader({ categoryName, currentQuestionNumber, totalQuestions }) {
   const classes = useStyles();
-  const percentDone = (currentQuestionNumber / totalQuestions) * 100;
 
-  return (
-    <Box className={classes.header}>
-      <Typography variant="h2">{categoryName}</Typography>
-      <Typography variant="body1">
-        {currentQuestionNumber} of {totalQuestions}
-      </Typography>
-      <LinearProgress
-        color="primary"
-        variant="determinate"
-        value={percentDone}
-      />
-    </Box>
-  );
+  return <></>;
 }
 
 export default QuizHeader;
