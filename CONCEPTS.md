@@ -2,7 +2,7 @@
 
 This doc gives a brief explanation of the concepts used in the quizness application, and a link to the relevant documentation to understand more.
 
-## Material UI Components Used
+## [Material UI](https://material-ui.com/) Components Used
 
 ### [Box](https://material-ui.com/components/box/)
 
@@ -38,7 +38,7 @@ A wrapper API for defining the content in a card.
 
 We use the hook api for defining styles since we wanted to emphasize the importance of hook in modern react in this tutorial.
 
-## React Concepts
+## [React](reactjs.org) Concepts
 
 ### [useState Hook](https://reactjs.org/docs/hooks-state.html)
 
