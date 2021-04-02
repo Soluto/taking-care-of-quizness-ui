@@ -4,20 +4,21 @@
   "description": "Infrastructure to host the taking-care-of-quizness-ui website",
   "license": "MIT",
   "scripts": {
-    "deploy": "cdk deploy",
+    "deploy": "cdk deploy --require-approval never",
     "synth": "cdk synth",
+    "destroy": "cdk destroy",
     "test": "jest"
   },
   "dependencies": {
-    "@aws-cdk/assert": "^1.90.1",
-    "@aws-cdk/aws-certificatemanager": "^1.91.0",
-    "@aws-cdk/aws-cloudfront": "^1.91.0",
-    "@aws-cdk/aws-route53": "^1.91.0",
-    "@aws-cdk/aws-route53-targets": "^1.91.0",
-    "@aws-cdk/aws-s3": "^1.91.0",
-    "@aws-cdk/aws-s3-deployment": "^1.91.0",
-    "@aws-cdk/core": "^1.90.1",
-    "aws-cdk": "^1.90.1"
+    "@aws-cdk/assert": "^1.95.0",
+    "@aws-cdk/aws-certificatemanager": "^1.95.0",
+    "@aws-cdk/aws-cloudfront": "^1.95.0",
+    "@aws-cdk/aws-route53": "^1.95.0",
+    "@aws-cdk/aws-route53-targets": "^1.95.0",
+    "@aws-cdk/aws-s3": "^1.95.0",
+    "@aws-cdk/aws-s3-deployment": "^1.95.0",
+    "@aws-cdk/core": "^1.95.0",
+    "aws-cdk": "^1.95.0"
   },
   "devDependencies": {
     "jest": "^26.6.3"
