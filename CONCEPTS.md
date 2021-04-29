@@ -18,6 +18,8 @@ MUI Grids are responsive and adapt to screen size and orientation. Uses CSS flex
 
 ### [ThemeProvider](https://material-ui.com/customization/theming/#theme-provider)
 
+Theme provider allows us to set commonly used styles and access them more easily in our components.
+
 ### [Typography](https://material-ui.com/components/typography/)
 
 Provides a typographic scale to ensure consistency in typographic rendering across components.
